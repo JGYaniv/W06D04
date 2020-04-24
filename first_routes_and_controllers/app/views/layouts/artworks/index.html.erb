@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FirstRoutesAndControllers</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+        <body>
+            <% arts = Artwork.all %>
+            <% arts.each do |art| %>
+                <figure>
+                    <img src='<%= art.image_url %>'/>
+                </figure>
+            <% end %>
+        </body>
+    </div>
+  </body>
+</html>
